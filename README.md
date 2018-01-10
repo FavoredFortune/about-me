@@ -22,7 +22,7 @@ A few reasons:
 ## To Install this project:
 
 Copy all files and run locally on your personal computer for now. 
-*Future updates to installation instructions coming later in 2018*
+*Future updates to installation instructions coming later in 2018.*
 
 ## Use:
 
@@ -30,4 +30,10 @@ To use this project, install on your local system and answer prompts. You'll get
 
 ## Other information:
 
-*Questions or suggestions? Please contact me via Git Hub. My username is Favored Fortune (my consultancy is Favored Fortune Consulting)* Thank you.
+*Questions or suggestions?* 
+
+Please contact me via Git Hub at Favored Fortune (https://github.com/FavoredFortune) .
+
+ Thank you.
+
+
