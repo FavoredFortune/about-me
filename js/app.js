@@ -3,7 +3,7 @@
 
     //Greeting
     var userName = prompt('Hi , what is your name?');
-    console.log('The user\s name is ' + userName);
+    console.log('The user\'s name is ' + userName);
     alert('Hi ' + userName + "!");
     
     //Question about number of pets
