@@ -4,7 +4,8 @@
     //Greeting
     var userName = prompt('Hi , what is your name?');
     console.log('The user\'s name is ' + userName);
-    alert('Hi ' + userName + "!");
+
+    alert('Hi ' + userName + '! Get ready to take a quiz about me, Sooz.');
     
     //Question about number of pets
     var pets = parseInt(prompt('How many pets do you think I have?'));
