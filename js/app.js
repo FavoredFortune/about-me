@@ -7,33 +7,54 @@ console.log('The user\'s name is ' + userName);
 
 alert('Hi ' + userName + '! Get ready to take a quiz about me, Sooz.');
 
+var scoreCounter = 0;
+
 // Question about location
 var soozLocation = prompt ('Does Sooz live by the space needle? Please respond with Y or N.').toUpperCase ();
 console.log (userName +' thinks Sooz does/does not live by the space needle? ' + soozLocation);
 
-if (soozLocation === 'Y') {
-    alert('It\'s true! If you\'re ever in the neighborhood, drop me a line to see if we can meet up.')
-}
-else if (soozLocation === 'N'){
+if  (soozLocation === 'Y') {
+    alert('Yep! You\'re right! If you\'re ever in the neighborhood, drop me a line to see if we can meet up.');
+    scoreCounter++;
+    console.log (userName +' got '+ scoreCounter +' point for this answer');
+    } 
+else if (soozLocation === 'N') {
     alert('Surprise! I do live just a couple blocks from the Space Needle. If you\'re ever in the neighborhood, drop me a line to see if we can meet up.');
-}
-else {
-    alert ('Please enter Y or N!');
-}
-
+    scoreCounter === 0;
+    console.log (userName +' got '+ scoreCounter +' point for this answer');
+    }
+else  
+    {
+    alert ('Please enter Y or N! For future questions. Sooz does live by the space needle!');
+    console.log (userName +' thinks Sooz does/does not live by the space needle? ' + soozLocation);
+    scoreCounter = 0;
+     }
+    
 //Question about age
 var soozsAge = prompt('Do you think I\'m older than 40? Please respond with Y or N.').toUpperCase();
 console.log(userName + ' thinks that Sooz is/is not older than 40? ' +soozsAge);
-
-if (soozsAge === 'Y') {
+    
+if (soozsAge === 'Y' ){
     alert('Yes I\'m older than 40.');
-}
+    scoreCounter++;
+    answerCounter = 0;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
+    } 
 else if (soozsAge === 'N') {
     alert('Thank you, I am flattered.');
-}
+    scoreCounter++;
+    answerCounter === 0;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
+    }
 else {
     alert('Please enter Y or N!');
-}
+    answerCounter ++; 
+    scoreCounter;
+    console.log (userName +' thinks Sooz is/is not older than 40? ' + soozsAge);
+    alert ('You can try again a few more times, then we\'ll move on');
+    }
+    
+
 
 //Questions about activities
 var soozKnit = prompt('Do I like to knit? Please respond with Y or N.').toUpperCase();
@@ -41,9 +62,13 @@ console.log(userName +' thinks that Sooz does/does not like to knit? ' + soozKni
 
 if (soozKnit === 'Y') {
     alert('Yes I do like to knit!');
+    scoreCounter ++;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else if (soozKnit === 'N') {
     alert('Nope! See the pictures below.');
+    scoreCounter;
+    console.log (userName +' now has a total score of ' + scoreCounter)
 }
  else {
     alert('Please enter Y or N!');
@@ -111,5 +136,6 @@ if (soozMovies === 'Y') {
         counter++;
         }
     }   
+
 
     alert ('Thanks for playing along, '+ userName + '!');
