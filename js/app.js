@@ -45,7 +45,7 @@ else if (soozsAge === 'N') {
     console.log (userName + ' now has a total score of '+ scoreCounter);
     }
 else {
-    alert('Please enter Y or N for future questions! You got this one wrong. I am over 40. Let\'s move on to the next question, '+ userName);
+    alert('Please enter Y or N for future questions! You got this one wrong. I am over 40. Let\'s move on to the next question, '+ userName + '.');
     scoreCounter;
     console.log (userName +' thinks Sooz is/is not older than 40? ' + soozsAge);
     console.log (userName + ' now has a total score of '+ scoreCounter);
@@ -93,18 +93,18 @@ if (soozMovies === 'Y') {
 var soozMuseums = prompt('Do I like to go to museums? Please responed with Y or N.').toUpperCase();
 console.log(userName + ' thinks that Sooz does/does not like to go to museums? ' + soozMuseums);
 
-if (soozMovies === 'Y') {
+if (soozMuseums === 'Y') {
     alert('Yes I do like to go to museums.');
     scoreCounter ++;
     console.log (userName + ' now has a total score of '+ scoreCounter);
 }
- else if (soozMovies === 'N') {
+ else if (soozMuseums === 'N') {
     alert('Nope! See the pictures below.');
     scoreCounter;
     console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else {
-    alert('I\'m not telling if you\re not going to use the Y or N to answer!');
+    alert('I\'m not telling if you\'re not going to use the Y or N to answer!');
     scoreCounter;
     console.log (userName + ' now has a total score of '+ scoreCounter);
 }
@@ -136,48 +136,47 @@ if (soozMovies === 'Y') {
 //Guess name a third cat for sooz 
 answerCounter = 1;
 
-var arrayofCatNames = ['Suzuki', 'Buell', 'Yamaha', 'Kawasaki', 'Honda', 'Aprillia', 'Benelli'];
+var arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
 
-var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess?');
+var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess?').toLowerCase ();
 console.log(userName +' guessed '+ guessCatName + ' on the ' + answerCounter + ' st/nd/rd try');
 
+var answerFlag2 = false;
 
-for(var i = 0; i < arrayofCatNames.length; i++) {
-    console.log('i is equal to ' + i);
-    console.log('Cat name guess: ' + guessCatName);
+for (var answerCounter = 1; answerCounter < arrayofCatNames.length; answerCounter ++) {
 
-for(var i = 0; i < arrayofCatNames.length; i++) {
-        // check if the user guessed one of the names
-
-        // if so, tell the user and stop the loop
-        if (guessCatName === arrayofCatNames[i]) {
-          alert('That is correct, ' + userName + '. I would probably name a 3rd cat ' + guessCatName + '. The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
-          scoreCounter ++;
-          console.log (userName + ' now has a total score of '+ scoreCounter);
-          break;
-        }
-        // if not, keep checking
-        while (guessCatName != arrayofCatNames[i] && answerCounter<= 8)  
-        { alert('Nope. Guess again...Here\'s a hint: both Harley and Ducati are not just my cat\'s names but also names of motorcyclebrands. Remember you only have a total of 6 guesses!');
-        scoreCounter;
-        answerCounter++;
-        console.log (userName + ' guessed '+ guessCatName + ' which is incorrect.');
-        console.log (userName + ' currently has a total score of ' + scoreCounter);
-        console.log (userName + 'has guessed '+ answerCounter + ' times.');
+    // check if the user guessed one of the names and if so, tell the user and stop the loop
+    if (guessCatName === arrayofCatNames[answerCounter]) {
+        alert('That is correct, ' + userName + '. I would probably name a third cat ' + guessCatName + '. The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
+        scoreCounter ++;
+        answerFlag2 === true;
+        answerCounter === 0;
+        console.log (userName + ' now has a total score of '+ scoreCounter);
+        if (scoreCounter <= 6 && answerCounter >=7 && answerFlag2 === true) {
+            alert ('Thanks for playing along, '+ userName + '. You got '+ scoreCounter + ' points out of 7 in this quiz.');
         } 
-        if (guessCatName != arrayofCatNames[i] && answerCounter >8){
-            alert('Sorry,' + userName + 'You didn\'t guess correctly. The options for a name for a third cat are all motorcycle brands! The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
-            scoreCounter;
-            console.log (userName + ' currently has a total score of ' + scoreCounter); 
-
+        else if (scoreCounter === 7 && answerFlag2 === true){
+            alert ('Thanks for playing, ' + userName + '. You got a perfect '+ scoreCounter + ' out of 7. You must know me really well. Good job!');
         }
-        break;
-    }
-            
-if (scoreCounter <= 6 && answerCounter >=7) {
-    alert ('Thanks for playing along, '+ userName + '. You got '+ scoreCounter + ' points out of 7 in this quiz.');
-    } 
-    else {
-    alert ('Thanks for playing, ' + userName + '. You got a perfect '+ scoreCounter + ' out of 7. You must know me really well. Good job!')
-    }
-}
+   
+        // if not, keep checking
+        while (guessCatName != arrayofCatNames[answerCounter] && answerCounter<= 7 && answerFlag2 === false)
+        {
+             alert('Nope. Guess again...Here\'s a hint: both Harley and Ducati are not just my cat\'s names but also names of motorcycle brands. Remember you only have a total of six guesses!');
+            scoreCounter;
+            answerCounter++;
+            answerFlag2 === false; 
+            console.log (userName + ' guessed '+ guessCatName + ' which is incorrect.');
+            console.log (userName + ' currently has a total score of ' + scoreCounter);
+            console.log (userName + ' has guessed '+ answerCounter + ' times.');
+        }        
+        //and when they run out of 6 guesses
+        if (answerCounter >7 && answerFlag2 === false) {
+            alert('Sorry,' + userName + 'You didn\'t guess correctly. The options for a name for a third cat are all popular motorcycle brands! The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
+            alert ('Thanks for playing along, '+ userName + '. You got '+ scoreCounter + ' points out of 7 in this quiz.');
+            scoreCounter;
+            answerFlag2 === true;
+            console.log (userName + ' currently has a total score of ' + scoreCounter);
+        } else {
+            alert ('Thanks for playing, ' + userName + '. You got a perfect '+ scoreCounter + ' out of 7. You must know me really well. Good job!');
+        }
