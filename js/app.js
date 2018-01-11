@@ -25,7 +25,7 @@ else if (soozLocation === 'N') {
     }
 else  
     {
-    alert ('Please enter Y or N! For future questions. Sooz does live by the space needle!');
+    alert ('Please enter Y or N for future questions! You got this one wrong. I do live by the space needle! That\s okay ' +userName +', give the next question a try.');
     console.log (userName +' thinks Sooz does/does not live by the space needle? ' + soozLocation);
     scoreCounter = 0;
      }
@@ -37,54 +37,57 @@ console.log(userName + ' thinks that Sooz is/is not older than 40? ' +soozsAge);
 if (soozsAge === 'Y' ){
     alert('Yes I\'m older than 40.');
     scoreCounter++;
-    answerCounter = 0;
     console.log (userName + ' now has a total score of '+ scoreCounter);
     } 
 else if (soozsAge === 'N') {
     alert('Thank you, I am flattered.');
-    scoreCounter++;
-    answerCounter === 0;
+    scoreCounter;
     console.log (userName + ' now has a total score of '+ scoreCounter);
     }
 else {
-    alert('Please enter Y or N!');
-    answerCounter ++; 
+    alert('Please enter Y or N for future questions! You got this one wrong. I am over 40. Let\'s move on to the next question, '+ userName);
     scoreCounter;
     console.log (userName +' thinks Sooz is/is not older than 40? ' + soozsAge);
-    alert ('You can try again a few more times, then we\'ll move on');
+    console.log (userName + ' now has a total score of '+ scoreCounter);
     }
-    
-
 
 //Questions about activities
 var soozKnit = prompt('Do I like to knit? Please respond with Y or N.').toUpperCase();
 console.log(userName +' thinks that Sooz does/does not like to knit? ' + soozKnit);
 
 if (soozKnit === 'Y') {
-    alert('Yes I do like to knit!');
+    alert('You\'re right! I do like to knit.');
     scoreCounter ++;
     console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else if (soozKnit === 'N') {
-    alert('Nope! See the pictures below.');
+    alert('Nope! See the pictures on the page.');
     scoreCounter;
     console.log (userName +' now has a total score of ' + scoreCounter)
 }
  else {
-    alert('Please enter Y or N!');
+    alert('Please enter Y or N for questions. Come on ' +userName + ', we\'ve talked about this. You know better by now! And yes, I like to knit. Let\'s move on to the next question.');
+    scoreCounter;
+    console.log (userName +' now has a total score of ' + scoreCounter)
 }
 
 var soozMovies = prompt('Do I like to go to movies? Please responed with Y or N.').toUpperCase();
 console.log(userName +' thinks that Sooz does/does not like movies? '+ soozMovies);
 
 if (soozMovies === 'Y') {
-    alert('Yes I do like to go to movies.');
+    alert('Yep! I am a big movie fan and do like to go to movies.');
+    scoreCounter ++;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else if (soozMovies === 'N') {
-    alert('Nope! See the pictures below.');
+    alert('Nope! See the pictures on the page.');
+    scoreCounter;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else {
-    alert('Please enter Y or N!');
+    alert('Still not using "y" or "n"? You\re no fun! I do like to go to movies a lot. Now, please ' + userName + ', follow the instructions and answer questions as noted moving forward. Thanks!');
+    scoreCounter;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
 
 var soozMuseums = prompt('Do I like to go to museums? Please responed with Y or N.').toUpperCase();
@@ -92,50 +95,89 @@ console.log(userName + ' thinks that Sooz does/does not like to go to museums? '
 
 if (soozMovies === 'Y') {
     alert('Yes I do like to go to museums.');
+    scoreCounter ++;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else if (soozMovies === 'N') {
     alert('Nope! See the pictures below.');
+    scoreCounter;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
  else {
-    alert('Please enter Y or N!');
+    alert('I\'m not telling if you\re not going to use the Y or N to answer!');
+    scoreCounter;
+    console.log (userName + ' now has a total score of '+ scoreCounter);
 }
 
-
-//ARRAYS- collections, store more than one value in a variable as an array, data structure
-//name a third cat for sooz - didn't work yet. 
-//var arrayofCatNames = ['Suzuki', 'Buell', 'Yamaha'];
-// var catNames = prompt('Sooz\'s cats are called Harley and Ducati. Pick a number, 0 - 2 to see what a third cat might be named');
-// console.log('User picked ' + catNames);
-// if (catNames === 0) {
-//     alert('Sooz would name her third cat ' + arrayofCatNames[0]);
-// }
-// else if (catNames === 1) {
-//     alert('Sooz would name her third cat ' + arrayofCaNames[1]);
-// }
-// else if (catNames === 2) {
-//     alert('Sooz would name her third cat ' + arrayofCatNames[2]);
-// }
-// else {
-//     alert('Please pick only a whole number from 0 to 2');
-// }
-
-//  //Question about number of pets
+//Question about number of pets
  var flag = false;
- var counter = 0;
+ var answerCounter = 0;
 
- while  (counter <5 && flag === false) {
+ while  (answerCounter <5 && flag === false) {
         var pets = parseInt(prompt('How many pets do you think I have? Guess a whole number between 0 and 5.'));
         console.log(userName + ' guessed ' + pets + '.');
 
      if ( pets === 2 ){
-        alert('That is correct!');
+        alert('That is correct! I have two cats. You can see a picture of them on the page, in fact.');
         flag = true;
+        scoreCounter ++;
+        console.log (userName + ' now has a total score of '+ scoreCounter);
+        
         }
         else {
         alert('No. That is incorrect. You have only have 5 chances guess. Try again, if you can!');
-        counter++;
+        answerCounter++;
+        scoreCounter;
+        console.log (userName + ' now has a total score of '+ scoreCounter);
         }
     }   
 
+//ARRAYS- collections, store more than one value in a variable as an array, data structure
+//Guess name a third cat for sooz 
+answerCounter = 1;
 
-    alert ('Thanks for playing along, '+ userName + '!');
+var arrayofCatNames = ['Suzuki', 'Buell', 'Yamaha', 'Kawasaki', 'Honda', 'Aprillia', 'Benelli'];
+
+var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess?');
+console.log(userName +' guessed '+ guessCatName + ' on the ' + answerCounter + ' st/nd/rd try');
+
+
+for(var i = 0; i < arrayofCatNames.length; i++) {
+    console.log('i is equal to ' + i);
+    console.log('Cat name guess: ' + guessCatName);
+
+for(var i = 0; i < arrayofCatNames.length; i++) {
+        // check if the user guessed one of the names
+
+        // if so, tell the user and stop the loop
+        if (guessCatName === arrayofCatNames[i]) {
+          alert('That is correct, ' + userName + '. I would probably name a 3rd cat ' + guessCatName + '. The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
+          scoreCounter ++;
+          console.log (userName + ' now has a total score of '+ scoreCounter);
+          break;
+        }
+        // if not, keep checking
+        while (guessCatName != arrayofCatNames[i] && answerCounter<= 8)  
+        { alert('Nope. Guess again...Here\'s a hint: both Harley and Ducati are not just my cat\'s names but also names of motorcyclebrands. Remember you only have a total of 6 guesses!');
+        scoreCounter;
+        answerCounter++;
+        console.log (userName + ' guessed '+ guessCatName + ' which is incorrect.');
+        console.log (userName + ' currently has a total score of ' + scoreCounter);
+        console.log (userName + 'has guessed '+ answerCounter + ' times.');
+        } 
+        if (guessCatName != arrayofCatNames[i] && answerCounter >8){
+            alert('Sorry,' + userName + 'You didn\'t guess correctly. The options for a name for a third cat are all motorcycle brands! The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
+            scoreCounter;
+            console.log (userName + ' currently has a total score of ' + scoreCounter); 
+
+        }
+        break;
+    }
+            
+if (scoreCounter <= 6 && answerCounter >=7) {
+    alert ('Thanks for playing along, '+ userName + '. You got '+ scoreCounter + ' points out of 7 in this quiz.');
+    } 
+    else {
+    alert ('Thanks for playing, ' + userName + '. You got a perfect '+ scoreCounter + ' out of 7. You must know me really well. Good job!')
+    }
+}
