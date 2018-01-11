@@ -39,10 +39,10 @@
     if (soozKnit === 'Y') {
         alert('Yes I do like to knit!');
     }
-    else if (soozKnit === 'N') {
+     else if (soozKnit === 'N') {
         alert('Nope! See the pictures below.');
     }
-    else {
+     else {
         alert('Please enter Y or N!');
     }
     
@@ -52,22 +52,22 @@
     if (soozMovies === 'Y') {
         alert('Yes I do like to go to movies.');
     }
-    else if (soozMovies === 'N') {
+     else if (soozMovies === 'N') {
         alert('Nope! See the pictures below.');
     }
-    else {
+     else {
         alert('Please enter Y or N!');
     }
     var soozMuseums = prompt('Do I like to go to museums? Please responed with Y or N.').toUpperCase();
-    console.log('The user thinks that Sooz ' + soozMuseums + ' movies');
+    console.log('The user thinks that Sooz ' + soozMuseums + ' museums');
     
     if (soozMovies === 'Y') {
         alert('Yes I do like to go to museums.');
     }
-    else if (soozMovies === 'N') {
+     else if (soozMovies === 'N') {
         alert('Nope! See the pictures below.');
     }
-    else {
+     else {
         alert('Please enter Y or N!');
     }
     alert ('Thanks for playing along, '+ userName + '!');
