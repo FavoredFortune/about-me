@@ -113,9 +113,9 @@ while (answerCounter < 5 && flag === false) {
   var pets = parseInt(prompt('How many pets do you think I have? Guess a whole number between 0 and 5.'));
   console.log(userName + ' guessed ' + pets + '.');
   if (pets === 2) {
-    alert('That is correct! I have two cats. You can see a picture of them on the page, in fact.');
     flag = true;
     scoreCounter++;
+    alert('That is correct! I have two cats. You can see a picture of them on the page, in fact.');
     console.log(userName + ' now has a total score of ' + scoreCounter);
   }
   else {
@@ -127,12 +127,12 @@ while (answerCounter < 5 && flag === false) {
 }
 // //ARRAYS- collections, store more than one value in a variable as an array, data structure
 //Guess name a third cat for sooz
-var answerCounter = 1;
+answerCounter = 1;
 var answerFlag2 = false;
 var arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
 
 while (answerCounter < 6 && answerFlag2 === false) {
-  var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess? Please be sure to answer with a proper-name (i.e. a capital and then lowercase). Thanks!').toLowerCase ();
+  var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess?').toLowerCase ();
   console.log(userName + ' guessed ' + guessCatName + ' on the ' + answerCounter + ' st/nd/rd try');
 
   // check if the user guessed one of the names and if so, tell the user and stop the loop
@@ -143,6 +143,7 @@ while (answerCounter < 6 && answerFlag2 === false) {
   }
   if (answerFlag2 === true){
     alert('That is correct, ' + userName + '. I would probably name a third cat ' + guessCatName + '. The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli. You got that in ' + answerCounter + ' tries.');
+    scoreCounter++;
     console.log(userName + ' guessed ' + guessCatName + ' which is on the list of cat names.');
     console.log(userName + ' currently has a total score of ' + scoreCounter);
     console.log(userName + ' has guessed ' + answerCounter + ' times.');
