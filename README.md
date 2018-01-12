@@ -17,6 +17,8 @@ A few reasons:
 * CSS
 * JavaScript
 * GitHub
+* Jon Duckett HTML & CSS book
+* Jon Duckett JavaScript & jQuery book
 * Help from my teacher, classmates and TAs
 
 ## To Install this project:
