@@ -8,8 +8,13 @@ padding 15px;
 
 h1 {font-size: 30px;
     color: white;
-    
 
+
+}
+img {
+    width: 150
+    padding: 5 px;
+    border: 5 px;
 }
  
  h2{
