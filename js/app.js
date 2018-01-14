@@ -4,7 +4,6 @@
 //Global variables
 var scoreCounter = 0;
 var answerFlag = false;
-var answerFlag2 = false;
 
 //Greeting
 var userName = prompt('Hi , what is your name?');
@@ -65,7 +64,7 @@ function soozKnit (){
     console.log(userName + ' now has a total score of ' + scoreCounter);
   }
   else if (soozKnit === 'N') {
-    alert('Nope! See the pictures on the page.');
+    alert('Nope! See the pictures on the page. I\'m pretty addicted to knitting and many fibery pursuits!');
     scoreCounter;
     console.log(userName + ' now has a total score of ' + scoreCounter);
   }
@@ -144,27 +143,28 @@ function soozPets (){
 //Guess name a third cat for sooz
 
 function guessCatName () {
-  var answerCounter = 1;
+  var answerCounter = 0;
   var arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
+  var answerFlag = false;
 
-  while (answerCounter < 6 && answerFlag2 === false) {
+  while (answerCounter < 6 && answerFlag === false) {
     var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess?').toLowerCase ();
     console.log(userName + ' guessed ' + guessCatName + ' on the ' + answerCounter + ' st/nd/rd try');
 
     // check if the user guessed one of the names and if so, tell the user and stop the loop
     for (var i = 0; i < arrayofCatNames.length; i++) {
       if (guessCatName === arrayofCatNames[i]){
-        answerFlag2 = true;
+        answerFlag = true;
       }
     }
-    if (answerFlag2 === true){
+    if (answerFlag === true){
       alert('That is correct, ' + userName + '. I would probably name a third cat ' + guessCatName + '. The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli. You got that in ' + answerCounter + ' tries.');
       scoreCounter++;
       console.log(userName + ' guessed ' + guessCatName + ' which is on the list of cat names.');
       console.log(userName + ' has guessed ' + answerCounter + ' times.');
       console.log(userName + ' currently has a total score of ' + scoreCounter);
     }
-    if (answerFlag2 === false){
+    if (answerFlag === false){
       scoreCounter;
       i++;
       alert('Nope. Guess again...Here\'s a hint: both Harley and Ducati are not just my cat\'s names but also names of motorcycle brands. Remember you only have a total of six guesses! And you\'ve already guessed ' + answerCounter + ' times.');
@@ -174,7 +174,7 @@ function guessCatName () {
       console.log(userName + ' has guessed ' + answerCounter + ' times.');
       console.log(userName + ' currently has a total score of ' + scoreCounter);
     }
-    if (answerFlag2 === false && answerCounter === 6){
+    if (answerFlag === false && answerCounter === 6){
       alert ('Thanks for trying, ' + userName + '. The full list of name options includes Suzuki, Buell, Yamaha, Kawasaki, Honda, Aprillia and Benelli.');
     }
   }
@@ -189,11 +189,11 @@ soozPets();
 guessCatName ();
 
 //end of quiz message to user
-if (scoreCounter <= 6 && answerFlag2 === true || answerFlag2 === false) {
+if (scoreCounter <= 6 && answerFlag === true || answerFlag === false) {
   alert('Thanks for playing along, ' + userName + '. You got ' + scoreCounter + ' points out of 7 in this quiz.');
   console.log(userName + ' now has a total score of ' + scoreCounter);
 }
 
-if (scoreCounter === 7 && answerFlag2 === true) {
+if (scoreCounter === 7 && answerFlag === true) {
   alert('Thanks for playing, ' + userName + '. You got a perfect ' + scoreCounter + ' out of 7. You must know me really well. Good job!');
 }
