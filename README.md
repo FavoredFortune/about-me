@@ -20,15 +20,11 @@ A few reasons:
 * Jon Duckett HTML & CSS book
 * Jon Duckett JavaScript & jQuery book
 * Help from my teacher, classmates and TAs
-
-## To Install this project:
-
-Copy all files and run locally on your personal computer for now. 
-*Future updates to installation instructions coming later in 2018.*
+* Pair reviewed by my classmate Haron Yunis
 
 ## Use:
 
-To use this project, install on your local system and answer prompts. You'll get to know more about me in the process.
+After being sure your web browser of choice (Chrome, Safari, Explorer, Firefox, etc.) is the latest version, please simply  answer the prompts as you recieve them on the screen. You'll learn more about me, Sooz Richman (the woman behind Favored Fortune Consulting).
 
 ## Other information:
 
@@ -37,5 +33,11 @@ To use this project, install on your local system and answer prompts. You'll get
 Please contact me via Git Hub at Favored Fortune (https://github.com/FavoredFortune) .
 
  Thank you.
+
+## Copyright:
+
+ While this code may be considered protected/open under the MIT Licesnse, please note that the content and images displayed are the intellectual property of Suzanne Richman (c) 2018.
+ 
+
 
 
