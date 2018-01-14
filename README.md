@@ -14,7 +14,7 @@ A few reasons:
 * bash Linux terminal
 * HTML
 * md
-* CSS (note my reset CSS file is code from Erik Meyer and edited by me)
+* CSS (note my reset CSS file is code from Erik Meyer just for older browsers, edited by me)
 * JavaScript
 * GitHub
 * Jon Duckett HTML & CSS book
