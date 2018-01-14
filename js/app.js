@@ -143,11 +143,11 @@ function soozPets (){
 //Guess name a third cat for sooz
 
 function guessCatName () {
-  var answerCounter = 0;
+  var answerCounter = 1;
   var arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
   var answerFlag = false;
 
-  while (answerCounter < 6 && answerFlag === false) {
+  while (answerCounter < 7 && answerFlag === false) {
     var guessCatName = prompt('Sooz\'s cats are called Harley and Ducati. Can you guess what a third cat might be named? You\'ll get 6 tries and then I\'ll just tell you what the options for a 3rd cat\'s name might be. So, what\'s your guess?').toLowerCase ();
     console.log(userName + ' guessed ' + guessCatName + ' on the ' + answerCounter + ' st/nd/rd try');
 
