@@ -5,6 +5,17 @@
 var scoreCounter = 0;
 var answerFlag = false;
 
+function AnswerQuiz(quizTakerName,soozLocation,soozAge,soozKnit,soozMovies,soozMuseums,soozPets,arrayofCatNames){
+this.quizTakerName = quizTakerName
+this.soozLocation = soozLocation;
+this.soozsAge = soozAge;
+this.soozKnit = soozKnit;
+this.soozMovies = soozMovies;
+this.soozMuseums = soozMuseums;
+this.soozPets = soozPets;
+this.arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
+}
+
 //Greeting
 var userName = prompt('Hi , what is your name?');
 console.log('The user\'s name is ' + userName);
@@ -180,13 +191,30 @@ function guessCatName () {
   }
 }
 
-soozLocation ();
-soozsAge ();
-soozKnit ();
+soozLocation();
+soozsAge();
+soozKnit();
 soozMovies();
-soozMuseums ();
+soozMuseums();
 soozPets();
-guessCatName ();
+guessCatName();
+function addNewAnswers(event){
+  event.preventDefault();
+  console.log (event.target.nameOfStore.value);
+
+  var newNameOfStore = event.target.nameOfStore.value;
+  var newMinCust = event.target.minCust.value;
+  var newMaxCust = event.target.maxCust.value;
+  var newAvgCookies = event.target.avgCookies.value;
+
+  new StoreCookieSales (newNameOfStore,newMinCust,newMaxCust,newAvgCookies);
+
+  allStoresTable.innerHTML = '';
+  makeHeaderRow();
+  renderAllStores();
+  makeFooterRow();
+  newStoreForm.reset();
+
 
 //end of quiz message to user
 if (scoreCounter <= 6 && answerFlag === true || answerFlag === false) {
