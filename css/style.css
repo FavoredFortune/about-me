@@ -1,15 +1,15 @@
 body {
   background-color: rgb(16, 63, 85);
   color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size-adjust: 120%;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 36px;
   margin: 15px;
   padding: 15px;
-  font-family: 'Macondo', 'Indie Flower', 'Josefin Sans', sans-serif;
 }
 
 h1 {font-size: 30px;
   color: white;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 img {
@@ -18,6 +18,8 @@ img {
   padding: 5px;
   border: 2px dotted whitesmoke;   
 }
+
+
 button{
   background:white;
   border-radius: 5px;
@@ -27,12 +29,177 @@ button{
   padding:24px;
   margin-left: 60px;
 }
+
 h2{
   font-size: 22px;
-  stroke: white
- }
+  stroke: white;
+  font-family: 'Julius Sans One', sans-serif;
+
+}
+
 ul.pic li {
   margin: 5px; 
   display: inline;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+a{
+  color:#874D63;
+}
+
+a:visited {
+  color:#A8D2CB;
+}
+
+
+section.footer {
+  background-color: #FAF9EE;
+  color:  #874D63;
+ font-family: 'Nanum Brush Script', cursive;
+  font-size: 12px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+section.footer p{
+  margin:10px;  
+ font-family: 'Nanum Brush Script', cursive;
+}
+
+fieldset{
+  text-align: center;
+  margin: 30px;
+  color:White;
+  font-size: 16px;
+ font-family: 'Nanum Brush Script', cursive;
+}
+
+label,input{
+  margin: 10px; 
+  font-size: 30px;
+}
+
+legend{
+  padding: 10px;
+  font-size: 40px;
+}
+
+button{
+  border-radius: 15px;
+  margin:20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #F2D387;
+  color: #874D63;
+  font-size: 14px;
+ font-family: 'Nanum Brush Script', cursive;
+}
+
+#loginForm{
+  margin: 20px;
+ font-family: 'Nanum Brush Script', cursive;
+}
+
+img {
+ margin: 30px;
+}
+
+#card-img{
+  width:80%;
+  text-align: left;
+}
+
+p{
+  line-height: 2rem;
+  margin-left: 30px;
+  margin-top:10px;
+  margin-right:30px;
+  margin-bottom: 10px;  
+}
+
+main {
+  width: 960px;
+  margin-left: 40%;
+}
+
+div{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* entire container, keeps perspective */
+ .flipContainer {
+  width: 300px;
+  height: 350px;
+  perspective: 1000px;
+  z-index: 1;
+  margin: 30px 30px 0 0;
+  color: black;
+} 
+
+main div:nth-child(3n) {
+  margin: 30px 0 0 0;
+}
+
+/* entire container, keeps perspective */
+.flipContainer1 {
+  width: 300px;
+  height: 350px;
+  perspective: 1000px;
+  z-index: 1;
+  margin: 30px 30px 0 0;
+  color: black;
+} 
+
+.flipper1 {
+  width: 300px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.6s linear;
+  border: 5px ridge white;
+}
+
+/* flip the pane when hovered */
+.flipContainer1:hover .flipper1 {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+
+.front1 {
+  background-color: #874D63;
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  backface-visibility: hidden;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 0px 0px 30px black;
+}
+
+.front1 h2 {
+  font-size: 120%;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+.back1 {
+  background-color:white;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
+  text-shadow: 0px 0px 30px black;
+}
+
+.back1 li {
+  margin: 5px 0 0 5px;
 }
 

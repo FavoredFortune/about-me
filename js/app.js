@@ -5,6 +5,22 @@
 var scoreCounter = 0;
 var answerFlag = false;
 
+//Greeting/Remember user
+function checkLocalStorage() {
+  if (localStorage.getItem('userName') === null) {
+    var userName = prompt('Hi , what is your name?');
+    console.log('The user\'s name is ' + userName);
+    alert('Hi ' + userName + '! Welcome to my first hand-coded site.');
+    userName = JSON.stringify(localStorage.userName);
+  } else {
+    userName = JSON.parse(localStorage.userName);
+    alert('Welcome back, ' + userName + '.')
+
+
+
+
+
+//Constructor function to generate instances of full quiz answerst to set in localStorage
 function AnswerQuiz(quizTakerName,soozLocation,soozAge,soozKnit,soozMovies,soozMuseums,soozPets,arrayofCatNames){
 this.quizTakerName = quizTakerName
 this.soozLocation = soozLocation;
@@ -16,10 +32,7 @@ this.soozPets = soozPets;
 this.arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
 }
 
-//Greeting
-var userName = prompt('Hi , what is your name?');
-console.log('The user\'s name is ' + userName);
-alert('Hi ' + userName + '! Get ready to take a quiz about me, Sooz.');
+
 
 // Question about location
 function soozLocation(){
@@ -155,7 +168,7 @@ function soozPets (){
 
 function guessCatName () {
   var answerCounter = 1;
-  var arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
+  var arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'triumph','aprillia', 'benelli'];
   var answerFlag = false;
 
   while (answerCounter < 7 && answerFlag === false) {
