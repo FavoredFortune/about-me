@@ -5,6 +5,9 @@
 var scoreCounter = 0;
 var answerFlag = false;
 
+//array for storing profiles created
+Answers.allAnswers = [];
+
 //Greeting/Remember user
 function checkLocalStorage(){
   if (localStorage.getItem('userName') === null) {
@@ -16,31 +19,49 @@ function checkLocalStorage(){
     var articleElement = document.getElementById('intro');
     var paraElement = document.createElement('p');
     paraElement.textContent = 'Welcome to the quiz page, ' + userName + '.';
-    
-    console.log(paraElement);
-
     articleElement.appendChild(paraElement);
-
-    console.log(articleElement);
-
-    //add user name to DOM
-    // var paraElement = document.createElement('p');
-    // paraElement = document.textContent = 'Okay, ' + userName;
-    // sectionEl.appendChild(paraElement);
   }
 }
 
 //Constructor function to generate instances of full quiz answerst to set in localStorage
-function AnswerQuiz(quizTakerName,soozLocation,soozAge,soozKnit,soozMovies,soozMuseums,soozPets,arrayofCatNames){
-  this.quizTakerName = quizTakerName;
+function AnswerQuiz(soozLocation,soozAge,soozKnit,soozMovies,soozMuseums,soozPets,arrayofCatNames){
   this.soozLocation = soozLocation;
   this.soozsAge = soozAge;
   this.soozKnit = soozKnit;
   this.soozMovies = soozMovies;
   this.soozMuseums = soozMuseums;
   this.soozPets = soozPets;
-  this.arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'benelli'];
+  this.arrayofCatNames = ['suzuki', 'buell', 'yamaha', 'kawasaki', 'honda', 'aprillia', 'triumph','benelli'];
+  Answers.allAnswers.push(this);
 }
+
+//Example profile to test functionality
+new AnswerQuiz('Betty','Y','44','Y','2','triumph');
+
+//Set content variables for the form on the DOM
+var userAnswers = document.getElementById('quiz');
+
+function newQuizAnswer(event) {
+  event.preventDefault();
+  var soozLocation = event.target.soozLocation.value;
+  var soozsAge = event.target. soozAge.value;
+  var soozKnit = event.target.soozKnit.value;
+  var soozMovies = event.target.soozMovies.value;
+  var soozMuseums = event.target.oozMuseums.value;
+  var soozPets = event.target.soozPets.value;
+  var arrayofCatNames = [];
+
+  //create new user object instance from the constructor function
+  new AnswerQuiz(soozLocation,soozAge,soozKnit,soozMovies,soozMuseums,soozPets,arrayofCatNames);
+
+  //put new user into local storage for results page
+  for(var k in AnswerQuiz.allAnswers) {
+    localStorage.setItem('newQuizAnswer',JSON.stringify(Answers.allAnswers[k]));
+  }
+  //redirect to results page when rest of function is complete, before function ends
+  window.location = 'results.html';
+}
+
 
 // // Question about location
 // function soozLocation(){
