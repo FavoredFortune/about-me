@@ -20,6 +20,7 @@ A few reasons:
 * http://gifmaker.me/ to make animated gifs of images for site
 * http://www.color-hex.com/ for color palatte selection and inspiration
 * https://www.w3schools.com/howto/howto_css_two_columns.asp for how to create text columns
+* https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage for a refresher on options for storing an item into localStorage
 * Jon Duckett HTML & CSS book
 * Jon Duckett JavaScript & jQuery book
 * Help from my teacher, classmates and TAs
