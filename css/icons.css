@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kjvwyu');
+  src:  url('fonts/icomoon.eot?kjvwyu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kjvwyu') format('truetype'),
+    url('fonts/icomoon.woff?kjvwyu') format('woff'),
+    url('fonts/icomoon.svg?kjvwyu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+.icon-pencil2:before {
+  content: "\e906";
+}
+.icon-images:before {
+  content: "\e90e";
+}
+.icon-music:before {
+  content: "\e911";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-book:before {
+  content: "\e91f";
+}
+.icon-books:before {
+  content: "\e920";
+}
+.icon-file-text2:before {
+  content: "\e926";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-menu3:before {
+  content: "\e9bf";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}

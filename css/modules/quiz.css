@@ -1,0 +1,38 @@
+
+a:link{
+  text-decoration: none;
+}
+
+a{
+  color: #f5aa14;
+  text-shadow: 16px,6px,0px #152736;
+}
+
+a:visited {
+  color: #152736;
+}
+
+legend {
+  font-size: 30px;
+  color: white;
+  margin: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+fieldset{
+  text-align: center;
+  margin: 30px;
+  color:White;
+  font-size: 16px;
+ font-family: 'Nanum Brush Script', cursive;
+}
+
+label,input{
+  margin: 10px; 
+  font-size: 30px;
+}
+
+#loginForm{
+  margin: 20px;
+ font-family: 'Nanum Brush Script', cursive;
+}
