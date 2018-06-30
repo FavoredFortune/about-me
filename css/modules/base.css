@@ -22,17 +22,24 @@ header {
   text-align: right;
 }
 
+.site-header {
+  background: #F5aa14;
+  overflow: hidden;
+  /* padding: 20px 10px; */
+}
+
+/* Link styles */
+
+a{
+  color:#4682B4;
+  text-shadow: 16vw,6vw,0vw #777;
+}
 a:link{
   text-decoration: none;
 }
 
-a{
-  color: #f5aa14;
-  text-shadow: 16px,6px,0px #152736;
-}
-
 a:visited {
-  color: #152736;
+  color: #777;
 }
 
 nav ul li {
@@ -57,7 +64,23 @@ section.footer {
 section.footer p{
   margin:10px;  
 }
+
+/*for screen readers*/
+.scr-reader {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
 /* navigation menu - mobile first */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .icon-menu {
   font-size: 3em;
   float: right;
@@ -82,10 +105,14 @@ section.footer p{
   margin-right: .4em;
   font-size: 1.5em;
   padding: .5em .2em;
-  border-bottom: 1px solid #ccc;
 }
 
 @media only screen and (min-width: 640px) {
+  
+  header{
+    height: auto;
+  }
+
   .icon-menu {
     display: none;
   }

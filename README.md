@@ -33,6 +33,7 @@ After being sure your web browser of choice (Chrome, Safari, Explorer, Firefox, 
 * https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage for a refresher on options for storing an item into localStorage
 * CSS Styling Lists - W3Schools: https://www.w3schools.com/css/css_list.asp
 * SMACCS modular organizational philosophy as outlined here: https://smacss.com/
+* Free Code Camp for lessons on CSS styling for screen readers and improved accessibility in general https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/
 * W3 Schools for refresher on sticky footers: https://www.w3schools.com/howto/howto_css_fixed_footer.asp
 * Jon Duckett HTML & CSS book
 * Jon Duckett JavaScript & jQuery book
