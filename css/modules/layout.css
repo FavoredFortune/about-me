@@ -11,8 +11,13 @@ h2{
 
 }
 
+section{
+  margin-top: 29vh;
+  margin-bottom: 0vh;
+}
+
 article{
-  line-height: 3.5rem;
+  line-height: .5vh;
 }
 
 ul.pic li {

@@ -4,7 +4,7 @@ a:link{
 }
 
 a{
-  color: #f5aa14;
+  color: #4682B4;
   text-shadow: 16px,6px,0px #152736;
 }
 
@@ -30,6 +30,10 @@ fieldset{
 label,input{
   margin: 10px; 
   font-size: 30px;
+}
+
+.quiz-style{
+  margin: 0;
 }
 
 #loginForm{

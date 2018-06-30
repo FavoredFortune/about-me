@@ -14,11 +14,11 @@ header {
   left: 0px;
   top: 0px;
   background-color: #f5aa14;
-  height: 30%;
+  height: 34%;
   width: 100%;
   color:  #4682B4;
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.5vh;
   text-align: right;
 }
 
@@ -56,7 +56,7 @@ section.footer {
   height: 50px;
   color:  #4682B4;
   font-family: 'Julius Sans One', sans-serif;
-  font-size:1vw;
+  font-size:1.5vh;
   text-align: center;
   /* margin-top: 40px; */
 }
