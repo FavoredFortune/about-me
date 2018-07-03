@@ -35,6 +35,7 @@ After being sure your web browser of choice (Chrome, Safari, Explorer, Firefox, 
 * SMACCS modular organizational philosophy as outlined here: https://smacss.com/
 * Free Code Camp for lessons on CSS styling for screen readers and improved accessibility in general https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/
 * W3 Schools for refresher on sticky footers: https://www.w3schools.com/howto/howto_css_fixed_footer.asp
+* W3 Schools for help on styling collapsible mobile-first navigation/header: https://www.w3schools.com/howto/howto_js_collapsible.asp
 * Jon Duckett HTML & CSS book
 * Jon Duckett JavaScript & jQuery book
 * Help from my teacher, classmates and TAs
